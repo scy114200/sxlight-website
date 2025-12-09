@@ -1,0 +1,100 @@
+xing<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SxLight 博客 · 测试站点</title>
+<meta name="description" content="SxLight 的个人博客测试站点，采用纯 HTML/CSS/JS 构建，后续将迁移到 Vue3。">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/">SxLight</a>
+    <nav class="nav">
+      <a href="/" class="nav-link active">首页</a>
+      <a href="#posts" class="nav-link">博客</a>
+      <a href="#about" class="nav-link">关于</a>
+    </nav>
+    <button class="theme-toggle" aria-label="切换主题" data-theme-toggle>🌙</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-inner">
+      <h1 class="headline">你好，欢迎来到我的博客</h1>
+      <p class="subhead">这是一版使用 HTML/CSS/JS 搭建的精美测试站点，后续将迁移到 Vue3。</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#posts">开始阅读</a>
+        <a class="btn" href="#about">了解本站</a>
+      </div>
+    </div>
+    <div class="hero-bg" aria-hidden="true"></div>
+  </section>
+
+  <section id="posts" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>最新文章</h2>
+        <a class="link" href="#">查看全部</a>
+      </div>
+      <div class="grid cards">
+        <a class="card" href="post.html">
+          <div class="card-media gradient"></div>
+          <div class="card-body">
+            <h3 class="card-title">从零开始搭建我的博客</h3>
+            <p class="card-desc">记录用纯前端技术快速搭建并在 Cloudflare 上部署的过程。</p>
+            <div class="card-meta">2025-12-09 · 5 min</div>
+          </div>
+        </a>
+        <a class="card" href="post.html">
+          <div class="card-media gradient"></div>
+          <div class="card-body">
+            <h3 class="card-title">设计系统的色彩与层次</h3>
+            <p class="card-desc">采用现代化配色与层次，打造清晰易读的博客界面。</p>
+            <div class="card-meta">2025-12-01 · 8 min</div>
+          </div>
+        </a>
+        <a class="card" href="post.html">
+          <div class="card-media gradient"></div>
+          <div class="card-body">
+            <h3 class="card-title">性能与可访问性优化实践</h3>
+            <p class="card-desc">通过语义化结构、资源优化和交互细节改善用户体验。</p>
+            <div class="card-meta">2025-11-20 · 6 min</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section muted">
+    <div class="container">
+      <div class="about">
+        <h2>关于本站</h2>
+        <p>本站目前为测试版本，使用原生前端技术搭建。后续将迁移到 Vue3，并与 Cloudflare 进行生产部署与优化。</p>
+        <p>你可以随意浏览页面与交互，欢迎提出改进建议。</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>© 2025 SxLight</div>
+    <div class="footer-links">
+      <a href="#">RSS</a>
+      <a href="#">GitHub</a>
+      <a href="#">联系我</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>
+
