@@ -1,7 +1,8 @@
 <script setup>
 import DefaultLayout from '../layouts/DefaultLayout.vue'
 import PostCard from '../components/PostCard.vue'
-import { ArrowRight, Sparkles, TrendingUp, Grid, List } from 'lucide-vue-next'
+import ValineComment from '../components/ValineComment.vue'
+import { ArrowRight, Sparkles, TrendingUp, Grid, List, X } from 'lucide-vue-next'
 import { ref, onMounted } from 'vue'
 const avatarSrc = '/avatars/avatar.png'
 const fallbackAvatar = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAOcb+h8AAAAASUVORK5CYII='
@@ -12,6 +13,11 @@ const viewMode = ref('grid') // 'grid' or 'list'
 const posts = ref([])
 const featuredPost = ref(null)
 const recentPosts = ref([])
+
+// 评论弹窗控制
+const showCommentModal = ref(false)
+const openComment = () => { showCommentModal.value = true }
+const closeComment = () => { showCommentModal.value = false }
 
 async function loadManifest() {
   try {
@@ -129,31 +135,29 @@ onMounted(loadManifest)
           </div>
         </div>
 
-        <!-- Recent Comments Widget (Replaced Newsletter) -->
         <div class="glass-panel p-6 rounded-2xl">
-          <h3 class="font-bold text-lg mb-4 text-primary">最新评论</h3>
-          <ul class="space-y-4">
-            <li class="flex gap-3 text-sm">
-              <div class="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-700 flex-shrink-0"></div>
-              <div>
-                <div class="font-medium text-primary">Alice</div>
-                <p class="text-secondary line-clamp-2 mt-1">这篇文章写得太棒了，对我的学习很有帮助！</p>
-              </div>
-            </li>
-            <li class="flex gap-3 text-sm">
-              <div class="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-700 flex-shrink-0"></div>
-              <div>
-                <div class="font-medium text-primary">Bob</div>
-                <p class="text-secondary line-clamp-2 mt-1">期待更多关于 Vue 3 的教程。</p>
-              </div>
-            </li>
-          </ul>
-          <button class="w-full mt-6 py-2 border border-gray-200 dark:border-gray-700 text-secondary font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-white/5 transition-colors text-sm">
+          <h3 class="font-bold text-lg mb-4 text-primary">留言</h3>
+          <button @click="openComment" class="w-full mt-6 py-2 border border-gray-200 dark:border-gray-700 text-secondary font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-white/5 transition-colors text-sm">
             留下评论
           </button>
         </div>
       </aside>
     </div>
+
+    <!-- 评论弹窗 -->
+    <Teleport to="body">
+      <div v-if="showCommentModal" class="fixed inset-0 z-[1000]">
+        <div class="absolute inset-0 bg-black/40" @click="closeComment"></div>
+        <div class="absolute inset-0 flex items-center justify-center p-4">
+          <div class="glass-panel rounded-2xl w-full max-w-2xl shadow-2xl p-4">
+            <ValineComment :path="'/'" :bare="true" />
+          </div>
+        </div>
+        <button @click="closeComment" aria-label="关闭" class="absolute top-6 right-6 z-30 glass-chip rounded-full w-12 h-12 flex items-center justify-center text-secondary hover:text-primary">
+          <X class="w-6 h-6" />
+        </button>
+      </div>
+    </Teleport>
   </DefaultLayout>
 </template>
 
