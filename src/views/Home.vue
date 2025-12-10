@@ -10,10 +10,10 @@ import { posts } from '../data/posts'
     <section class="mb-16 text-center">
       <div class="glass-hero inline-block rounded-3xl p-8 sm:p-12 max-w-4xl mx-auto">
         <h1 class="text-4xl sm:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 mb-6">
-          Welcome to SXLight
+          欢迎来到 SXLight
         </h1>
         <p class="text-lg sm:text-xl text-gray-700 dark:text-gray-200 max-w-2xl mx-auto leading-relaxed">
-          Exploring the boundaries of design and technology through a liquid glass perspective.
+          透过液态玻璃的视角，探索设计与技术的边界。
         </p>
       </div>
     </section>
@@ -21,7 +21,7 @@ import { posts } from '../data/posts'
     <!-- Posts Grid -->
     <section>
       <h2 class="text-2xl font-bold mb-8 px-2 text-gray-800 dark:text-gray-100 border-l-4 border-blue-500 pl-4">
-        Latest Stories
+        最新文章
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <PostCard v-for="post in posts" :key="post.id" :post="post" />

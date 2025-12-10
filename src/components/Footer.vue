@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="glass-footer rounded-2xl p-6 text-center">
         <p class="text-sm text-gray-600 dark:text-gray-400">
-          &copy; {{ new Date().getFullYear() }} SXLight. All rights reserved.
+          &copy; {{ new Date().getFullYear() }} SXLight. 版权所有.
         </p>
         <div class="mt-2 flex justify-center space-x-4 text-sm text-gray-500 dark:text-gray-500">
           <span>Designed with Liquid Glass</span>

@@ -20,7 +20,7 @@ onMounted(() => {
         appKey: 'Your-App-Key-Here', // Placeholder
         path: props.path,
         avatar: 'mp',
-        placeholder: 'Leave a comment (Valine is not fully configured yet)...'
+        placeholder: '欢迎留下你的评论（Valine 尚未完全配置）...'
       })
     } catch (e) {
       console.error('Valine init failed', e)
@@ -32,7 +32,7 @@ onMounted(() => {
 <template>
   <div class="glass-comment rounded-2xl p-6 mt-12">
     <h3 class="text-xl font-bold mb-6 text-gray-800 dark:text-gray-100 border-b border-gray-200 dark:border-gray-700 pb-2">
-      Comments
+      评论
     </h3>
     <div ref="valineContainer" id="vcomments"></div>
   </div>

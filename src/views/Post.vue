@@ -28,7 +28,7 @@ const renderedContent = computed(() => {
     <div v-if="post" class="max-w-4xl mx-auto">
       <div class="mb-8">
         <RouterLink to="/" class="inline-flex items-center gap-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors mb-6 glass-btn px-4 py-2 rounded-full">
-          <ArrowLeft class="w-4 h-4" /> Back to Home
+          <ArrowLeft class="w-4 h-4" /> 返回首页
         </RouterLink>
       </div>
 
@@ -60,8 +60,8 @@ const renderedContent = computed(() => {
     </div>
 
     <div v-else class="text-center py-20">
-      <h2 class="text-2xl font-bold">Post not found</h2>
-      <RouterLink to="/" class="text-blue-600 hover:underline mt-4 inline-block">Go Home</RouterLink>
+      <h2 class="text-2xl font-bold">文章未找到</h2>
+      <RouterLink to="/" class="text-blue-600 hover:underline mt-4 inline-block">返回首页</RouterLink>
     </div>
   </DefaultLayout>
 </template>

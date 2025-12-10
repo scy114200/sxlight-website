@@ -24,8 +24,8 @@ const toggleMenu = () => {
         <!-- Desktop Menu -->
         <div class="hidden md:block">
           <div class="ml-10 flex items-baseline space-x-4">
-            <RouterLink to="/" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-white/40 transition-all duration-200 dark:text-gray-200 dark:hover:text-blue-400 dark:hover:bg-white/10">Home</RouterLink>
-            <RouterLink to="/about" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-white/40 transition-all duration-200 dark:text-gray-200 dark:hover:text-blue-400 dark:hover:bg-white/10">About</RouterLink>
+            <RouterLink to="/" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-white/40 transition-all duration-200 dark:text-gray-200 dark:hover:text-blue-400 dark:hover:bg-white/10">首页</RouterLink>
+            <RouterLink to="/about" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-white/40 transition-all duration-200 dark:text-gray-200 dark:hover:text-blue-400 dark:hover:bg-white/10">关于</RouterLink>
             <a href="https://github.com/yourusername" target="_blank" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-white/40 transition-all duration-200 dark:text-gray-200 dark:hover:text-blue-400 dark:hover:bg-white/10 flex items-center gap-2">
               <Github class="w-4 h-4" /> GitHub
             </a>
@@ -45,8 +45,8 @@ const toggleMenu = () => {
     <!-- Mobile Menu -->
     <div v-show="isMenuOpen" class="md:hidden absolute w-full px-4 mt-2">
       <div class="glass-card rounded-xl px-2 pt-2 pb-3 space-y-1 sm:px-3">
-        <RouterLink to="/" @click="isMenuOpen = false" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-white/40 dark:text-gray-200 dark:hover:text-blue-400 dark:hover:bg-white/10">Home</RouterLink>
-        <RouterLink to="/about" @click="isMenuOpen = false" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-white/40 dark:text-gray-200 dark:hover:text-blue-400 dark:hover:bg-white/10">About</RouterLink>
+        <RouterLink to="/" @click="isMenuOpen = false" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-white/40 dark:text-gray-200 dark:hover:text-blue-400 dark:hover:bg-white/10">首页</RouterLink>
+        <RouterLink to="/about" @click="isMenuOpen = false" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-white/40 dark:text-gray-200 dark:hover:text-blue-400 dark:hover:bg-white/10">关于</RouterLink>
         <a href="https://github.com" target="_blank" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-white/40 dark:text-gray-200 dark:hover:text-blue-400 dark:hover:bg-white/10 flex items-center gap-2">
           <Github class="w-4 h-4" /> GitHub
         </a>
