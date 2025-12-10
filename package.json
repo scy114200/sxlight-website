@@ -1,0 +1,32 @@
+{
+  "name": "sxlight-website",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.17",
+    "@vueuse/head": "^2.0.0",
+    "flexsearch": "^0.8.212",
+    "front-matter": "^4.0.2",
+    "gray-matter": "^4.0.3",
+    "lucide-vue-next": "^0.556.0",
+    "markdown-it": "^14.1.0",
+    "valine": "^1.5.3",
+    "vue": "^3.5.24",
+    "vue-router": "^4.6.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.17",
+    "@tailwindcss/typography": "^0.5.19",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "autoprefixer": "^10.4.22",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.17",
+    "vite": "^7.2.4"
+  }
+}
