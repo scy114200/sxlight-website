@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <rect width="800" height="400" fill="#111827"/>
+  <circle cx="200" cy="200" r="80" fill="#60a5fa"/>
+  <rect x="420" y="140" width="160" height="120" rx="12" fill="#a78bfa"/>
+  <line x1="280" y1="200" x2="420" y2="200" stroke="#fff" stroke-width="4"/>
+  <text x="200" y="320" fill="#fff" font-size="18" text-anchor="middle" font-family="sans-serif">节点 A</text>
+  <text x="500" y="300" fill="#fff" font-size="18" text-anchor="middle" font-family="sans-serif">节点 B</text>
+</svg>
