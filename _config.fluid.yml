@@ -234,10 +234,12 @@ font:
 # 指定自定义 .js 文件路径，支持列表；路径是相对 source 目录，如 /js/custom.js 对应存放目录 source/js/custom.js
 # Specify the path of your custom js file, support list. The path is relative to the source directory, such as `/js/custom.js` corresponding to the directory `source/js/custom.js`
 custom_js:
+  - /js/custom.js
 
 # 指定自定义 .css 文件路径，用法和 custom_js 相同
 # The usage is the same as custom_js
 custom_css:
+  - /css/custom.css
 
 # 网页访问统计
 # Analysis of website visitors
@@ -353,16 +355,16 @@ navbar:
   # 导航栏毛玻璃特效，实验性功能，可能会造成页面滚动掉帧和抖动，部分浏览器不支持会自动不生效
   # Navigation bar frosted glass special animation. It is an experimental feature
   ground_glass:
-    enable: false
+    enable: true
 
     # 模糊像素，只能为数字，数字越大模糊度越高
     # Number of blurred pixel. the larger the number, the higher the blur
-    px: 3
+    px: 10
 
     # 不透明度，数字越大透明度越低，注意透明过度可能看不清菜单字体
     # Ratio of opacity, 1.0 is completely opaque
     # available: 0 - 1.0
-    alpha: 0.7
+    alpha: 0.6
 
   # 导航栏菜单，可自行增减，key 用来关联 languages/*.yml，如不存在关联则显示 key 本身的值；icon 是 css class，可以省略；增加 name 可以强制显示指定名称
   # Navigation bar menu. `key` is used to associate languages/*.yml. If there is no association, the value of `key` itself will be displayed; if `icon` is a css class, it can be omitted; adding `name` can force the display of the specified name
@@ -482,7 +484,7 @@ footer:
 index:
   # 首页 Banner 头图，可以是相对路径或绝对路径，以下相同
   # Path of Banner image, can be a relative path or an absolute path, the same on other pages
-  banner_img: /img/default.png
+  banner_img: /img/bg.jpg
 
   # 头图高度，屏幕百分比
   # Height ratio of banner image
@@ -554,7 +556,7 @@ index:
 # Post Page
 #---------------------------
 post:
-  banner_img: /img/default.png
+  banner_img: /img/bg.jpg
   banner_img_height: 70
   banner_mask_alpha: 0.3
 
@@ -918,7 +920,7 @@ discuss:
 # Archive Page
 #---------------------------
 archive:
-  banner_img: /img/default.png
+  banner_img: /img/bg.jpg
   banner_img_height: 60
   banner_mask_alpha: 0.3
 
@@ -929,7 +931,7 @@ archive:
 #---------------------------
 category:
   enable: true
-  banner_img: /img/default.png
+  banner_img: /img/bg.jpg
   banner_img_height: 60
   banner_mask_alpha: 0.3
 
@@ -958,7 +960,7 @@ category:
 #---------------------------
 tag:
   enable: true
-  banner_img: /img/default.png
+  banner_img: /img/bg.jpg
   banner_img_height: 80
   banner_mask_alpha: 0.3
   tagcloud:
@@ -975,7 +977,7 @@ tag:
 #---------------------------
 about:
   enable: true
-  banner_img: /img/default.png
+  banner_img: /img/bg.jpg
   banner_img_height: 60
   banner_mask_alpha: 0.3
   avatar: /img/avatar.png
@@ -997,7 +999,7 @@ about:
 # Custom Page through `hexo new page`
 #---------------------------
 page:
-  banner_img: /img/default.png
+  banner_img: /img/bg.jpg
   banner_img_height: 60
   banner_mask_alpha: 0.3
 
@@ -1008,7 +1010,7 @@ page:
 #---------------------------
 page404:
   enable: true
-  banner_img: /img/default.png
+  banner_img: /img/bg.jpg
   banner_img_height: 85
   banner_mask_alpha: 0.3
   # 重定向到首页的延迟(毫秒)
@@ -1022,7 +1024,7 @@ page404:
 #---------------------------
 links:
   enable: true
-  banner_img: /img/default.png
+  banner_img: /img/bg.jpg
   banner_img_height: 60
   banner_mask_alpha: 0.3
   # 友链的成员项
