@@ -1,34 +1,27 @@
 {
-  "name": "sxlight-website",
-  "private": true,
+  "name": "hexo-site",
   "version": "0.0.0",
-  "type": "module",
+  "private": true,
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "hexo generate",
+    "clean": "hexo clean",
+    "deploy": "hexo deploy",
+    "server": "hexo server"
+  },
+  "hexo": {
+    "version": "7.3.0"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.1.17",
-    "@vueuse/core": "^14.1.0",
-    "@vueuse/head": "^2.0.0",
-    "flexsearch": "^0.8.212",
-    "front-matter": "^4.0.2",
-    "gray-matter": "^4.0.3",
-    "highlight.js": "^11.11.1",
-    "lucide-vue-next": "^0.556.0",
-    "markdown-it": "^14.1.0",
-    "valine": "^1.5.3",
-    "vue": "^3.5.24",
-    "vue-router": "^4.6.3"
-  },
-  "devDependencies": {
-    "@tailwindcss/postcss": "^4.1.17",
-    "@tailwindcss/typography": "^0.5.19",
-    "@vitejs/plugin-vue": "^6.0.1",
-    "autoprefixer": "^10.4.22",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.17",
-    "vite": "^7.2.4"
+    "hexo": "^7.0.0",
+    "hexo-generator-archive": "^2.0.0",
+    "hexo-generator-category": "^2.0.0",
+    "hexo-generator-index": "^3.0.0",
+    "hexo-generator-tag": "^2.0.0",
+    "hexo-renderer-ejs": "^2.0.0",
+    "hexo-renderer-marked": "^6.0.0",
+    "hexo-renderer-stylus": "^3.0.0",
+    "hexo-server": "^3.0.0",
+    "hexo-theme-fluid": "^1.9.8",
+    "hexo-theme-landscape": "^1.0.0"
   }
 }
